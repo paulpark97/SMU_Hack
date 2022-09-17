@@ -1,5 +1,8 @@
 import './App.css';
 import Camera from './components/camera'
+import {loadModels} from './components/utils/faceApi'
+
+loadModels();
 
 function App() {
   return (

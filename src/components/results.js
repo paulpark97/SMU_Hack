@@ -4,7 +4,7 @@ const Results = ({results,processing}) => {
     if (processing && results) {
         <h1>loading...</h1>
     }
-    if (!processing && results) {
+    if (!processing && results ) {
         return (
             <div>
                 <h1>Results</h1>

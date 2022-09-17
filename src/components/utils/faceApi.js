@@ -6,6 +6,7 @@ export const loadModels = () => {
   console.log(MODEL_URL);
 
   return Promise.all([
+    console.log("Does this work?"),
     faceapi.nets.tinyFaceDetector.loadFromUri(MODEL_URL),
     faceapi.nets.faceLandmark68Net.loadFromUri(MODEL_URL),
     faceapi.nets.faceRecognitionNet.loadFromUri(MODEL_URL),

@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import Webcam from "react-webcam";
-import { detectFaces, drawResults} from './utils/faceApi';
+import { detectFaces, drawResults, loadModels} from './utils/faceApi';
 import Results from './results';
 
 const Camera = () => {
@@ -12,22 +12,23 @@ const Camera = () => {
         if (camera.current !== null) {
             // looks for the faces in the frame
             const seenFaces = await detectFaces(camera.current.video);
-            await drawResults(camera.current.video, cameraCanvas.current,seenFaces,'box');
+            await drawResults(camera.current.video, cameraCanvas.current,seenFaces,'box')
             setResults(seenFaces)
             console.log(seenFaces)
         }
     }
     useEffect(() => {
-        // fetches faces in the frame every 50ms
+        // fetches faces in the frame every 1000ms
         const interval = setInterval(async() => {
             await getFaces();
-        }, 50);
+        }, 500);
         return () => clearInterval(interval);
     }, [results])
 
     return (
         <div>
             <Webcam ref={camera} width="800px" height="auto"/>
+            <Results result={results}></Results>
         </div>
     )
 }
