@@ -6,7 +6,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1 className='App-heading'>
-          hellowww {variable}
+          How you feelin? 
         </h1>
         
       </header>
