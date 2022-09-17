@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import Webcam from "react-webcam";
-import { detectFaces, drawResults} from './utils/faceApi';
+import { detectFaces, drawResults, loadModels} from './utils/faceApi';
 import Results from './results';
 
 const Camera = ({handleEmotion}) => {
@@ -18,7 +18,7 @@ const Camera = ({handleEmotion}) => {
         }
     }
     useEffect(() => {
-        // fetches faces in the frame every 50ms
+        // fetches faces in the frame every 1000ms
         const interval = setInterval(async() => {
             await getFaces();
         }, 250);
