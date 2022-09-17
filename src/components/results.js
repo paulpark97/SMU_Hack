@@ -12,24 +12,15 @@ const Results = ({results,handleEmotion}) => {
                     <div>
                         {results.map((result, i) => (
                             <div className="results__wrapper" key={i}>
-                                <p>One of you is probably is looking {result.expressions.asSortedArray()[0].expression}</p>
+                                <p>I miss us... {result.expressions.asSortedArray()[0].expression}</p>
                             </div>
                         ))}
                     </div>
                 ) : (
-                    <p>Here is your expression! {results[0].expressions.asSortedArray()[0].expression}</p>
+                    <p>I miss us... {results[0].expressions.asSortedArray()[0].expression}</p>
                 )}
             </div>
         );
-    }
-    else if(results.length>1){
-        return(results.map((result,key)=>(
-            <div key={key}>
-                <p>
-                    Emotion is {result.expressions.asSortedArray()[0].expression}
-                </p>
-            </div>
-        )))
     }
     else{
         return (
