@@ -1,7 +1,9 @@
 import * as faceapi from 'face-api.js';
 
 export const loadModels = () => {
+  console.log(process.env.PUBLIC_URL);
   const MODEL_URL = `${process.env.PUBLIC_URL}/models`;
+  console.log(MODEL_URL);
 
   return Promise.all([
     faceapi.nets.tinyFaceDetector.loadFromUri(MODEL_URL),
