@@ -6,7 +6,9 @@ import Results from './results';
 const Camera = ({handleEmotion}) => {
     const camera = useRef();
     const cameraCanvas = useRef();
+
     const [results,setResults] = useState([]);
+
     const getFaces = async () => {
         // check if the frame exists
         if (camera.current !== null) {
