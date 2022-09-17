@@ -4,7 +4,6 @@ export const loadModels = () => {
   console.log(process.env.PUBLIC_URL);
   const MODEL_URL = `${process.env.PUBLIC_URL}/models`;
   console.log(MODEL_URL);
-
   return Promise.all([
     console.log("Does this work?"),
     faceapi.nets.tinyFaceDetector.loadFromUri(MODEL_URL),
@@ -31,7 +30,7 @@ export const detectFaces = async (image) => {
     .withFaceLandmarks()
     .withFaceExpressions()
     .withAgeAndGender();
-
+  
   return faceapi.resizeResults(faces, displaySize);
 };
 

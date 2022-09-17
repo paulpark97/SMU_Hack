@@ -3,7 +3,7 @@ import Webcam from "react-webcam";
 import { detectFaces, drawResults, loadModels} from './utils/faceApi';
 import Results from './results';
 
-const Camera = () => {
+const Camera = ({handleEmotion}) => {
     const camera = useRef();
     const cameraCanvas = useRef();
 
@@ -14,7 +14,7 @@ const Camera = () => {
         if (camera.current !== null) {
             // looks for the faces in the frame
             const seenFaces = await detectFaces(camera.current.video);
-            await drawResults(camera.current.video, cameraCanvas.current,seenFaces,'box')
+            await drawResults(camera.current.video, cameraCanvas.current,seenFaces,'boxLandmarks');
             setResults(seenFaces)
             console.log(seenFaces)
         }
@@ -23,14 +23,14 @@ const Camera = () => {
         // fetches faces in the frame every 1000ms
         const interval = setInterval(async() => {
             await getFaces();
-        }, 500);
+        }, 250);
         return () => clearInterval(interval);
     }, [results])
 
     return (
         <div>
             <Webcam ref={camera} width="800px" height="auto"/>
-            <Results results={results}></Results>
+            <Results results={results} handleEmotion={handleEmotion}></Results>
         </div>
     )
 }

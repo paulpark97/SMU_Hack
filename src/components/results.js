@@ -1,10 +1,9 @@
 import React from 'react';
 
-const Results = ({results}) => {
-    if (!results) {
-        <h1>loading...</h1>
-    }
-    if (results && results.length > 0) {
+const Results = ({results,handleEmotion}) => {
+    
+    if (results.length > 0) {
+        handleEmotion(results[0].expressions.asSortedArray()[0].expression)
         return (
             <div>
                 <h1>Results</h1>
