@@ -13,6 +13,15 @@ const Results = ({results,handleEmotion}) => {
             </div>
         );
     }
+    else if(results.length>1){
+        return(results.map((result,key)=>(
+            <div key={key}>
+                <p>
+                    Emotion is {result.expressions.asSortedArray()[0].expression}
+                </p>
+            </div>
+        )))
+    }
     else{
         return (
             <div>
