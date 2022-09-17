@@ -6,7 +6,9 @@ import Results from './results';
 const Camera = () => {
     const camera = useRef();
     const cameraCanvas = useRef();
+
     const [results,setResults] = useState([]);
+
     const getFaces = async () => {
         // check if the frame exists
         if (camera.current !== null) {
@@ -28,7 +30,7 @@ const Camera = () => {
     return (
         <div>
             <Webcam ref={camera} width="800px" height="auto"/>
-            <Results result={results}></Results>
+            <Results results={results}></Results>
         </div>
     )
 }
