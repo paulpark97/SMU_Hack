@@ -1,0 +1,51 @@
+.App {
+  text-align: center;
+  /*--main-font:hotpink;*/
+}
+
+body {
+  background-color: #D3D3D3;
+}
+
+.Project-name{
+  font-size: 70px;
+}
+
+.nav {
+  background-color: #333;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 20px;
+  padding: 25px;
+}
+
+.nav ul{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav a{
+  color: inherit;
+  text-decoration: none;
+  height: 100%;
+  display: flex;
+  padding: .25rem;
+}
+
+.nav li.active{
+  color: #777;
+}
+
+.nav a:hover{
+  color: #777;
+}
+
+.Site-title{
+  font-size: 30px;
+}
+
