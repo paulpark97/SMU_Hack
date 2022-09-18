@@ -49,3 +49,13 @@ body {
   font-size: 30px;
 }
 
+.About-header{
+  background-color: rgb(148, 194, 240);
+  text-align: center;
+  padding: 70px;
+}
+
+.About-dv-hd{
+  margin: 0;
+  top: -10px;
+}

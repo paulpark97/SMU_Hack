@@ -5,7 +5,7 @@ const Navbar= () =>{
     <div className="nav">
         <div className="Site-title">
             <text>
-                Project Name
+                Vibe Check
             </text>
         </div>
         <ul>
