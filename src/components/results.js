@@ -18,7 +18,7 @@ const Results = ({results,handleEmotion}) => {
                         ))}
                     </div>
                 ) : (
-                    <p>I miss us... {results[0].expressions.asSortedArray()[0].expression}</p>
+                    <p>I miss us... {emojiMap[results[0].expressions.asSortedArray()[0].expression]}</p>
                 )}
             </div>
         );
