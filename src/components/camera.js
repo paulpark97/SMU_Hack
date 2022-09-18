@@ -20,7 +20,7 @@ const Camera = ({handleEmotion}) => {
         }
     }
     useEffect(() => {
-        // fetches faces in the frame every 1000ms
+        // fetches faces in the frame every 250ms
         const interval = setInterval(async() => {
             await getFaces();
         }, 250);
