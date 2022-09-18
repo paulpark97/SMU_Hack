@@ -1,4 +1,5 @@
 import React from 'react';
+import  emojiMap  from './utils/emojiMap';
 
 const Results = ({results,handleEmotion}) => {
     
@@ -12,7 +13,7 @@ const Results = ({results,handleEmotion}) => {
                     <div>
                         {results.map((result, i) => (
                             <div className="results__wrapper" key={i}>
-                                <p>I miss us... {result.expressions.asSortedArray()[0].expression}</p>
+                                <p>I miss us... {emojiMap[result.expressions.asSortedArray()[0].expression]}</p>
                             </div>
                         ))}
                     </div>
