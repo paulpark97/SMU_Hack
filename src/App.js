@@ -3,6 +3,9 @@ import { useState, useEffect } from 'react';
 import Camera from './components/camera'
 import { loadModels } from './components/utils/faceApi';
 import  emotionMap  from './components/utils/emotionMap';
+import Header from './components/header';
+import About from './about';
+import {Routes, Route} from 'react-router-dom';
 
 
 loadModels()
@@ -18,13 +21,8 @@ function App() {
   
   return (
     <div className="App" >
-      <header className="App-header" >
-        <h1 className='App-heading'>
-          Vibe Check
-        </h1>
-      </header>
+      <Header/>
       <Camera handleEmotion={handleEmotion}></Camera>
-      
     </div>
   );
 }

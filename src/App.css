@@ -4,6 +4,9 @@
 
 }
 
+.About-us-heading {
+  color: var(--main-font);
+}
 
 
 @media (prefers-reduced-motion: no-preference) {
@@ -24,6 +27,14 @@
   font:bold;
   color:var(--main-font);
 
+}
+.App-heading2{
+  color:black;
+  text-decoration: none;
+  transition-duration: 0.4s;
+}
+.App-heading2:hover{
+  text-decoration: underline;
 }
 
 .App-link {
